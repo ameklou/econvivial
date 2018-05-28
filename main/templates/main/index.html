@@ -1,0 +1,107 @@
+
+{% extends "main/base.html" %}
+{% load staticfiles %}
+{% block title %}e-centreconvivial | Home{% endblock title %}
+{% block content %}
+{% include "main/menu.html" %}
+<div class="slider hide-on-med-and-down ">
+    <ul class="slides">
+      <li>
+        <img src="{% static 'amame/img/main.jpg' %}"> <!-- random image -->
+
+      </li>
+
+    </ul>
+  </div>
+  <!-- about -->
+  <div class="row about">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col l6 m8 s12">
+          <h5>Qu'est ce que <span class="pink-text">e-centreconvivial</span></h5>
+        </div>
+        <div class="col l6 m8 s12">
+          <div>
+            <i class="large material-icons">insert_chart</i>
+          </div>
+          <div>
+            <i class="far fa-hospital large-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end about -->
+  <!-- services -->
+    <div class="services">
+      <h3 class="pink-text center-align btm">e-centreconvivial</h3>
+    <div class="row">
+      <div class="col l4">
+        <div class="row">
+          <div class="col l8">
+            <h5 class="right-align text-top">Consultation IST</h5>
+          </div>
+          <div class="col l4">
+            <img src="{% static 'main/img/ist.png'%}" alt="" class="responsive-img">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l8">
+            <h5 class="right-align text-top">Planning famillial</h5>
+          </div>
+          <div class="col l4">
+            <img src="{% static 'main/img/planning.png'%}" alt="" class="responsive-img">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l8">
+            <h5 class="right-align text-top">Suivi du cycle mensuel</h5>
+          </div>
+          <div class="col l4">
+            <img src="{% static 'main/img/period.png'%}" alt="" class="responsive-img">
+          </div>
+        </div>
+      </div>
+      <div class="col l4">
+        <div class="center-align">
+
+          <img src="{% static 'main/img/ecentresvg.svg'%}" alt="" class="responsive-img">
+        </div>
+      </div>
+      <div class="col l4">
+        <div class="row">
+          <div class="col l4">
+            <img src="{% static 'main/img/assistance.png'%}" alt="" class="responsive-img">
+          </div>
+          <div class="col l8">
+
+            <h5 class="left-align text-top">Assistance en ligne</h5>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col l4">
+            <img src="{% static 'main/img/suivi-grossesse.png'%}" alt="" class="responsive-img">
+          </div>
+          <div class="col l8">
+
+            <h5 class="left-align text-top">Suivi de grossesse</h5>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col l4">
+            <img src="{% static 'main/img/conseil-icon.png'%}" alt="" class="responsive-img">
+          </div>
+          <div class="col l8">
+
+            <h5 class="left-align text-top">Conseil pratique</h5>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  <!-- end services -->
+{% endblock content %}

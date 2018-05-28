@@ -1,0 +1,58 @@
+/*
+Error: $color: 'color("orange", "accent-2")' is not a color for `lighten'
+        on line 105 of /Users/Surya/Codelabs/python/econvivial/econvivial/main/static/main/sass/components/_variables.scss
+
+100: // ==========================================================================
+101: 
+102: $card-padding: 24px !default;
+103: $card-bg-color: #fff !default;
+104: $card-link-color: color("orange", "accent-2") !default;
+105: $card-link-color-light: lighten($card-link-color, 20%) !default;
+106: 
+107: 
+108: // 5. Carousel
+109: // ==========================================================================
+110: 
+
+Backtrace:
+/Users/Surya/Codelabs/python/econvivial/econvivial/main/static/main/sass/components/_variables.scss:105
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/script/tree/funcall.rb:315:in `reformat_argument_error'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/script/tree/funcall.rb:162:in `rescue in _perform'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/script/tree/funcall.rb:132:in `_perform'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:482:in `visit_variable'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:391:in `run'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/exec/base.rb:52:in `parse'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/exec/base.rb:19:in `parse!'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/bin/sass:13:in `<top (required)>'
+/Users/Surya/.rvm/gems/ruby-2.4.1/bin/sass:23:in `load'
+/Users/Surya/.rvm/gems/ruby-2.4.1/bin/sass:23:in `<main>'
+/Users/Surya/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/Users/Surya/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: $color: 'color(\"orange\", \"accent-2\")' is not a color for `lighten'\A         on line 105 of /Users/Surya/Codelabs/python/econvivial/econvivial/main/static/main/sass/components/_variables.scss\A \A 100: // ==========================================================================\A 101: \A 102: $card-padding: 24px !default;\A 103: $card-bg-color: #fff !default;\A 104: $card-link-color: color(\"orange\", \"accent-2\") !default;\A 105: $card-link-color-light: lighten($card-link-color, 20%) !default;\A 106: \A 107: \A 108: // 5. Carousel\A 109: // ==========================================================================\A 110: "; }

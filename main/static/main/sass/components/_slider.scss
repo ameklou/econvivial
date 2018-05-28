@@ -24,7 +24,8 @@
   }
 
   .slides {
-    background-color: $slider-bg-color;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("//spin.atomicobject.com/wp-content/uploads/20170324102432/portfolio-tips-feature-image.jpg");
+    background-size:cover;
     margin: 0;
     height: 400px;
 

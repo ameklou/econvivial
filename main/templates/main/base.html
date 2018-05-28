@@ -3,11 +3,19 @@
 <html lang="fr" >
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <title>{% block title %}e-centreconvivial{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'main/sass/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'main/sass/custom.css' %}">
   </head>
   <body>
     {% block content %}
     {% endblock content %}
+    <script src="{% static 'main/js/bin/jquery.min.js' %}" charset="utf-8"></script>
+    <script src="{% static 'main/js/bin/materialize.min.js' %}" charset="utf-8"></script>
+    <script src="{% static 'main/js/bin/custom.js' %}" charset="utf-8"></script>
 
   </body>
 </html>

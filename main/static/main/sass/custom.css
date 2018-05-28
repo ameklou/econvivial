@@ -1,0 +1,32 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+/* .slider{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("//spin.atomicobject.com/wp-content/uploads/20170324102432/portfolio-tips-feature-image.jpg");
+  background-size:cover;
+  background-color: red;
+} */
+
+
+.large-icon{
+  font-size: 5em;
+}
+
+.about{
+  height: 25em;
+
+}
+.services{
+  padding-top: 2em;
+  padding-bottom: 4em;
+  height: 100%;
+  background: #ececec;
+
+}
+.text-top{
+  padding-top: 1em;
+}
+.btm{
+  padding-bottom: 1em;
+}
