@@ -2,11 +2,14 @@ body{
   margin: 0;
   padding: 0;
 }
-/* .slider{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("//spin.atomicobject.com/wp-content/uploads/20170324102432/portfolio-tips-feature-image.jpg");
+.connexion{
+  background-image: linear-gradient(rgba(0, 0, 0.6, 0.8), rgba(0, 0, 0.6, 0.8)), url("https://econv.tk/wp-content/uploads/2018/05/rawpixel-593598-unsplash.jpg");
   background-size:cover;
-  background-color: red;
-} */
+
+  padding-top: 4em;
+  padding-bottom: 4em;
+  height: 100%;
+}
 
 
 .large-icon{

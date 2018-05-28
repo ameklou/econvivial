@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'account',
+    'django_summernote',
+    'consultation',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +126,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_HOST_USER = 'dev@ecentreconvivial.org'
+EMAIL_HOST_PASSWORD = '#open@bunshin'
+EMAIL_PORT = 587

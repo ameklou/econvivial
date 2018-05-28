@@ -1,0 +1,114 @@
+{% extends "main/base.html" %}
+{% block title %} e-centreconvivial | Inscription{% endblock title %}
+{% block content %}
+<div class="row top">
+  <div class="row">
+    <h3 class="center-align green-text">
+      Inscription
+    </h3>
+    <div class="col l10 m4 s10 offset-l1 offset-m4 offset-s1">
+      <div class="container">
+        <form class="" action="{% url 'signup'%}" method="post">
+
+          {% csrf_token %}
+
+          <div class="row">
+            <div class="input-field col l6 m6 s12">
+              {{form.username}}
+              <label for="username">Nom d'utilisateur</label>
+            </div>
+
+            <div class="input-field col s12 m6 l6">
+              {{form.email}}
+              <label for="email">Email</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 l6 m6">
+              {{form.password1}}
+              <label for="password">Mot de passe</label>
+            </div>
+            <div class="input-field col s12 l6 m6">
+            {{form.password2}}
+              <label for="password2">Comfirmation mot de passe</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 l6 m6">
+              <select name="sexe">
+                <option value="" disabled selected>Sexe</option>
+                <option value="M">Masculin</option>
+                <option value="F">Feminin</option>
+
+              </select>
+              <label>Sexe</label>
+            </div>
+            <div class="input-field col s12 l6 m6">
+              {{form.profession}}
+              <label for="phone">Profession</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 l6 m6">
+              {{form.phone}}
+              <label for="phone">Telephone</label>
+            </div>
+            <div class="input-field col s12 l6 m6">
+
+                <input type="text" name="birth_date" class="datepicker" placeholder="Date de naissance">
+
+            </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 l6 m6">
+                {{form.region}}
+                <label for="phone">Region</label>
+              </div>
+
+            </div>
+
+
+          <div class="row center-align">
+            <div class="col l12">
+              <p>
+                 <label>
+                   <input type="checkbox" />
+                   <span>J'accepte les conditions d'utilisations</span>
+                 </label>
+               </p>
+            </div>
+          </div>
+
+          <div class="row center-align">
+            <div class="col l12">
+              <button type="submit" class="waves-effect waves-light btn" name="button">Inscription</button>
+            </div>
+          </div>
+          <div class="row center-align">
+            <span>Vous avez deja un compte. <a href="{% url 'index'%}">Connexion</a> </span>
+          </div>
+        </form>
+
+
+    </div>
+  </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.datepicker');
+    var options = {
+      autoClose:true,
+      format:'yyyy-mm-dd',
+      yearRange: 40
+    }
+    var instances = M.Datepicker.init(elems, options);
+  });
+
+
+
+
+</script>
+{% endblock content %}

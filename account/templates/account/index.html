@@ -1,0 +1,38 @@
+{% extends "main/base.html" %}
+{% block title %} e-centreconvivial | Connexion{% endblock title %}
+{% block content %}
+<div class="row">
+  <div class="connexion">
+    <div class="row top">
+    <div class="col l6 m6 s10 offset-l3 offset-m3 offset-s1">
+      <form action="{% url 'signin'%} " method="post">
+        {% csrf_token %}
+        <div class="row">
+          <h3 class="center-align grey-text">
+            CONNEXION
+          </h3>
+          <div class="input-field col l12">
+            {{form.username}}
+            <label for="username">Nom d'utilisateur</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col l12">
+            {{form.password}}
+            <label for="username">Mot de passe</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l12">
+            <button type="submit" class="btn waves-effect">Connexion</button>
+          </div>
+        </div>
+        <div class="row">
+
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+</div>
+{% endblock content %}

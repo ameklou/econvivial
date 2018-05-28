@@ -6,5 +6,7 @@ $(document).ready(function(){
     constrainWidth:false
   }
   );
+  $('.sidenav').sidenav();
+  $('select').formSelect();
 }
 )

@@ -1,0 +1,8 @@
+{% autoescape off %}
+
+Salut {{ user.username }},
+Veuillez cliquer sur le lien suivant pour confirmer votre inscription.
+Au cas où le lien ne fonctionne pas, prière le copier et coller dans la barre de navigation.
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}
