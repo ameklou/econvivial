@@ -16,21 +16,25 @@ def consultation_detail(request,year,month,day,consultation):
     return render(request,'consultation/detail.html')
 
 def index(request):
-    if request.method=='POST':
-        form=ConsultationForm(request.POST)
-        if form.is_valid():
-            consultation=Consultation()
-            consultation.owner=request.user
-            consultation.motif=form.cleaned_data.get('motif')
-            consultation.voyage=form.cleaned_data.get('voyage')
-            consultation.enfant=form.cleaned_data.get('nombre_enfant')
-            consultation.situation=form.cleaned_data.get('situation')
-            consultation.ville=form.cleaned_data.get('ville')
-            consultation.save()
-            return redirect('consultations')
-    else:
-        context={
-        'form':ConsultationForm(),
-        'consultation':Consultation.objects.filter(owner=request.user)
-        }
-        return render(request,'consultation/index.html',context)
+    return render(request, 'consultation/index.html')
+    # if request.method=='POST':
+    #     form=ConsultationForm(request.POST)
+    #     if form.is_valid():
+    #         consultation=Consultation()
+    #         consultation.owner=request.user
+    #         consultation.motif=form.cleaned_data.get('motif')
+    #         consultation.voyage=form.cleaned_data.get('voyage')
+    #         consultation.enfant=form.cleaned_data.get('nombre_enfant')
+    #         consultation.situation=form.cleaned_data.get('situation')
+    #         consultation.ville=form.cleaned_data.get('ville')
+    #         consultation.save()
+    #         return redirect('consultation')
+    # else:
+    #     if request.user.is_authenticated:
+    #         context={
+    #         'form':ConsultationForm()
+    #         #'consultation':Consultation.objects.filter(owner=request.user)
+    #         }
+    #         return render(request,'consultation/index.html',context)
+    #     else:
+    #         return rediret('dashboard')

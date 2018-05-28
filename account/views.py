@@ -84,3 +84,7 @@ def activate(request, uidb64, token):
         return render(request,'account/comfirmation.html')
     else:
         return HttpResponse('Activation link is invalid!')
+
+
+def dashboard(request):
+    return render(request, 'account/dashboard.html')

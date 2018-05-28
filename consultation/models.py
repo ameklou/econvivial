@@ -24,7 +24,7 @@ class Consultation(models.Model):
 
 class Answer(models.Model):
     consultation=models.ForeignKey(Consultation, on_delete=models.CASCADE)
-    created_at=modelsDateField(auto_now_add=True)
+    created_at=models.DateField(auto_now_add=True)
     answer=models.TextField()
 
     def __str__(self):
