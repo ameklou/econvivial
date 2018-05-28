@@ -1,0 +1,31 @@
+
+{% extends "main/base.html" %}
+{% load staticfiles %}
+{% block title %}e-centreconvivial | Assistence en ligne{% endblock title %}
+{% block content %}
+{% include "main/menu.html" %}
+<div class="assistance hide-on-med-and-down ">
+    <ul class="slides">
+      <div class="container">
+        <div class="row">
+          <div class="col l8 m8 s12">
+            <br><br>
+            <h2 class="white-text">Assistance en ligne</h2>
+            <p class="white-text">Notre équipe de teleconseillers est à votre disposition 7j/7 pour repondre à toutes vos questions et preocupations.
+               Vous désirez vous adresser à un Medecin, Gynecologue, Conseiller Psychosocial, Sociologue, Sage-femme, où à un Pair-éducateur. Accédez au menu et écrivez au personnel de votre choix.</p>
+               <br>
+               <a href="#" class="btn waves-effect white black-text">Consultation</a>
+          </div>
+        </div>
+
+      </div>
+
+    </ul>
+  </div>
+{% if user.is_authenticated %}
+  <p>bye</p>
+  {% else%}
+  <p>helllo</p>
+
+{% endif %}
+{% endblock content %}
