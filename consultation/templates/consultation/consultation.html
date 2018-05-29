@@ -1,0 +1,54 @@
+
+
+{% extends "main/base.html" %}
+{% load staticfiles %}
+{% block title %}e-centreconvivial | Consultation IST {% endblock title %}
+{% block content %}
+{% include "main/menu.html" %}
+<div class="container">
+  <div class="row">
+
+    <div class="col l10 m10 s10 offset-l1 offset-m1 offset-s1">
+      <h5>Faire une consultation</h5>
+
+    <form action="{% url 'new_consultation'%}" method="post">
+      {% csrf_token%}
+      <div class="input-field col l12">
+        {{form.motif}}
+        <label for="username">Motif de la consultation</label>
+      </div>
+      <div class="input-field col l12">
+        {{form.situation}}
+        <label for="username">Situation matrimoniale</label>
+      </div>
+      <div class="input-field col l12">
+        {{form.enfant}}
+        <label for="username">Nombre d'enfant</label>
+      </div>
+      <div class="input-field col l12">
+        {{form.voyage}}
+        <label for="username">Voyagez-vous souvent?</label>
+      </div>
+      <div class="input-field col l12">
+        {{form.ville}}
+        <label for="username">Votre ville actuelle</label>
+      </div>
+      <div class="col l12">
+      <div class="row">
+        {{form.message}}
+      </div>
+
+      </div>
+      <div class="row">
+        <div class="col l12">
+            <div class="row">
+                <button type="submit" class="waves-effect waves-light btn ">Faire une Consultation</button>
+                <a href="{% url 'consultation'%}" class="waves-effect waves-light btn grey ">Annuler</a>
+            </div>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

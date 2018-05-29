@@ -24,5 +24,37 @@
   </div>
 
 
-<p class="green">qeiuafdhcdsjbhcdhjsbc eiwsdhbc</p>
+  {% if user.is_authenticated %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col l8 offset-l2">
+          {% for consultation in consultations %}
+
+          <div class="row">
+             <ul class="collection">
+                 <li class="collection-item avatar">
+                     <a href="#"><img src="{% static 'main/img/ist.png' %}" alt="" class="circle"></a>
+                     <span class="title">{{ consultation.created_at  }}</span>
+                     <p  ><a href="{{consultation.get_absolute_url}}" class="grey-text">{{ consultation.motif }}</a>
+
+
+                     </p>
+
+                 </li>
+             </ul>
+         </div>
+     {% empty %}
+         vous n'avez pas d'assistance encours
+
+
+          {% endfor %}
+        </div>
+        <div class="center-align">
+          <a href="{% url  'new_consultation' %}" class="btn waves-effect">Faire une consultation</a>
+        </div>
+      </div>
+    </div>
+
+  {% endif %}
 {% endblock content %}
