@@ -23,7 +23,7 @@ class Assistance(models.Model):
         return '%s %s' % (self.owner, self.service)
 
     def get_absolute_url(self):
-        return reverse('assistance_detail', args=[
+        return reverse('assistance_detail', args=[self.owner.pk,
                                                 self.created_at.year,
                                                  self.created_at.strftime('%m'),
                                                  self.created_at.strftime('%d'),

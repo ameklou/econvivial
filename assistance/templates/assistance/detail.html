@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+{% load staticfiles%}
+{% block title %} e-centreconvivial | {{assistance.owner}} {{assistance.service}}{% endblock title %}
+{% block content %}
+{% include "main/menu.html" %}
+<div class="container">
+  <div class="row">
+    <div class="col l8 offset-l2 s12 m8 offset-m2">
+      <div class="row">
+        <br>
+         <ul class="collection">
+             <li class="collection-item avatar">
+                 <a href="#"><img src="{% static 'main/img/ist.png' %}" alt="" class="circle"></a>
+                 <span class=" grey-text">{{ assistance.created_at  }}</span>
+                 <p  ><a href="#" class="grey-text">{{ assistance.service }}</a>
+
+
+                 </p>
+                 <div>
+                   {{assistance.message | safe}}
+                 </div>
+
+             </li>
+         </ul>
+     </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

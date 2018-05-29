@@ -32,10 +32,10 @@
         <div class="row">
            <ul class="collection">
                <li class="collection-item avatar">
-                   <a href="#"><img src="{% static 'main/img/assistance.png' %}" alt="" class="circle"></a>
+                   <a href="{{assistance.get_absolute_url}}"><img src="{% static 'main/img/assistance.png' %}" alt="" class="circle"></a>
                    <span class="title">{{ assistance.created_at  }}</span>
-                   <p  ><a href="#" class="grey-text">{{ assistance.service }}</a>
-                    
+                   <p  ><a href="{{assistance.get_absolute_url}}" class="grey-text">{{ assistance.service }}</a>
+
 
                    </p>
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Assistance
 from .forms import AssistanceForm
 # Create your views here.
@@ -10,9 +10,10 @@ def index(request):
     }
     return render(request, 'assistance/index.html',context)
 
-def assistance_detail(request,year,month,day,assistance):
+def assistance_detail(request,pk,year,month,day,assistance):
     assistance = get_object_or_404(Assistance,
                                     slug=assistance,
+                                    owner=pk,
                                     #owner=request.user,
 
                                    created_at__year=year,
@@ -28,7 +29,9 @@ def assistance(request):
             assistance.owner=request.user
             assistance.message=request.POST.get('message')
             assistance.service=request.POST.get('service')
-            assistance.slug=request.POST.get('service')
+            brut=request.POST.get('service')
+            brut=brut.replace(' ','-')
+            assistance.slug=brut
             assistance.save()
             return redirect('assistance')
         else:
