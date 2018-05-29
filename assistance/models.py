@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
 
-class Assistence(models.Model):
+class Assistance(models.Model):
 
     service_choice=(
     ('Medecin','Medecin'),
@@ -22,7 +22,8 @@ class Assistence(models.Model):
         return '%s %s' % (self.owner, self.service)
 
     def get_absolute_url(self):
-        return reverse('assistance_detail', args=[self.created_at.year,
+        return reverse('assistance_detail', args=[self.owner
+                                                self.created_at.year,
                                                  self.created_at.strftime('%m'),
                                                  self.created_at.strftime('%d'),
                                                  self.slug])
