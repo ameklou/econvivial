@@ -11,7 +11,14 @@ def index(request):
     return render(request, 'assistance/index.html',context)
 
 def assistance_detail(request,year,month,day,assistance):
-    return render(request, 'assistance/detail.html')
+    assistance = get_object_or_404(Assistance,
+                                    slug=assistance,
+                                    #owner=request.user,
+
+                                   created_at__year=year,
+                                   created_at__month=month,
+                                   created_at__day=day)
+    return render(request, 'assistance/detail.html',{'assistance':assistance})
 
 def assistance(request):
     if request.method == 'POST':

@@ -13,6 +13,7 @@ from django.db.models import Q
 # Create your views here.
 
 def consultation_detail(request,year,month,day,consultation):
+    
     return render(request,'consultation/detail.html')
 
 def index(request):

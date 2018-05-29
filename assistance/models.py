@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 # Create your models here.
 
 class Assistance(models.Model):
@@ -22,7 +23,7 @@ class Assistance(models.Model):
         return '%s %s' % (self.owner, self.service)
 
     def get_absolute_url(self):
-        return reverse('assistance_detail', args=[self.owner,
+        return reverse('assistance_detail', args=[
                                                 self.created_at.year,
                                                  self.created_at.strftime('%m'),
                                                  self.created_at.strftime('%d'),
