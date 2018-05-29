@@ -26,6 +26,8 @@ urlpatterns = [
     url(r'^account/', include('account.urls')),
     url(r'^consultation/', include('consultation.urls')),
     url(r'^assistance/', include('assistance.urls')),
+    url(r'^$', views.index, name="index"),
+    url(r'^summernote/', include('django_summernote.urls')),
 ]+ static(settings.MEDIA_URL,
                          document_root=settings.MEDIA_ROOT)
 
