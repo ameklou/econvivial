@@ -1,0 +1,38 @@
+
+
+{% extends "main/base.html" %}
+{% load staticfiles %}
+{% block title %}e-centreconvivial | Assistence en ligne{% endblock title %}
+{% block content %}
+{% include "main/menu.html" %}
+<div class="container">
+  <div class="row">
+
+    <div class="col l10 m10 s10 offset-l1 offset-m1 offset-s1">
+      <h5>Demander de l'assistance</h5>
+
+    <form action="{% url 'new_assistance'%}" method="post">
+      {% csrf_token%}
+      <div class="input-field col l12">
+        {{form.service}}
+        <label for="username">Service</label>
+      </div>
+      <div class="col l12">
+      <div class="row">
+        {{form.message}}
+      </div>
+
+      </div>
+      <div class="row">
+        <div class="col l12">
+            <div class="row">
+                <button type="submit" class="waves-effect waves-light btn ">Faire une Consultation</button>
+                <a href="{% url 'assistance'%}" class="waves-effect waves-light btn grey ">Annuler</a>
+            </div>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

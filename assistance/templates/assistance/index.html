@@ -14,7 +14,7 @@
             <p class="white-text">Notre équipe de teleconseillers est à votre disposition 7j/7 pour repondre à toutes vos questions et preocupations.
                Vous désirez vous adresser à un Medecin, Gynecologue, Conseiller Psychosocial, Sociologue, Sage-femme, où à un Pair-éducateur. Accédez au menu et écrivez au personnel de votre choix.</p>
                <br>
-               <a href="{% url  'index' %}" class="btn waves-effect white black-text">Consultation</a>
+               <a href="{% url  'new_assistance' %}" class="btn waves-effect white black-text">Consultation</a>
           </div>
         </div>
 
@@ -24,7 +24,34 @@
   </div>
 {% if user.is_authenticated %}
 
-  <p>helllo</p>
+  <div class="container">
+    <div class="row">
+      <div class="col l8 offset-l2">
+        {% for assistance in assistances %}
+
+        <div class="row">
+           <ul class="collection">
+               <li class="collection-item avatar">
+                   <img src="{% static 'main/img/assistance.png' %}" alt="" class="circle">
+                   <span class="title">{{ assistance.created_at  }}</span>
+                   <p  ><a href="#" class="grey-text">{{ assistance.service }}</a>
+
+                   </p>
+
+               </li>
+           </ul>
+       </div>
+   {% empty %}
+       vous n'avez pas d'assistance encours
+
+
+        {% endfor %}
+      </div>
+      <div class="center-align">
+        <a href="{% url  'new_assistance' %}" class="btn waves-effect">Faire une consultation</a>
+      </div>
+    </div>
+  </div>
 
 {% endif %}
 {% endblock content %}
