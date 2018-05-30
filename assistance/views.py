@@ -11,7 +11,10 @@ def index(request):
     return render(request, 'assistance/index.html',context)
 
 def assistance_detail(request,pk,year,month,day,assistance):
-    assistance = get_object_or_404(Assistance,
+    if request.method == 'POST':
+        pass
+    else:
+        assistance = get_object_or_404(Assistance,
                                     slug=assistance,
                                     owner=pk,
                                     #owner=request.user,
@@ -19,6 +22,7 @@ def assistance_detail(request,pk,year,month,day,assistance):
                                    created_at__year=year,
                                    created_at__month=month,
                                    created_at__day=day)
+
     return render(request, 'assistance/detail.html',{'assistance':assistance})
 
 def assistance(request):

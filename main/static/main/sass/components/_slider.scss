@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  height: 400px;
+  height: 500px;
   width: 100%;
 
   // Fullscreen slider
@@ -24,10 +24,11 @@
   }
 
   .slides {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("//spin.atomicobject.com/wp-content/uploads/20170324102432/portfolio-tips-feature-image.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://econv.tk/wp-content/uploads/2018/05/IMAGE-OK.jpg");
     background-size:cover;
+    background-position: top;
     margin: 0;
-    height: 400px;
+    height: 500px;
 
     li {
       opacity: 0;

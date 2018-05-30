@@ -20,7 +20,7 @@ class Assistance(models.Model):
     created_at=models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return '%s %s' % (self.owner, self.service)
+        return '%s-%s' % (self.owner, self.service)
 
     def get_absolute_url(self):
         return reverse('assistance_detail', args=[self.owner.pk,
@@ -28,3 +28,11 @@ class Assistance(models.Model):
                                                  self.created_at.strftime('%m'),
                                                  self.created_at.strftime('%d'),
                                                  self.slug])
+
+class AssistanceAnser(models.Model):
+    doctor=models.ForeignKey(User, verbose_name="doctor")
+    assistance=models.ForeignKey(Assistance)
+    message=models.TextField()
+
+    def __str__(self):
+        return self.assistance

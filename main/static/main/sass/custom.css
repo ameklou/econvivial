@@ -33,3 +33,13 @@ body{
 .btm{
   padding-bottom: 1em;
 }
+
+.top-home{
+  padding-top: 4em;
+}
+
+.action{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://econv.tk/wp-content/uploads/2018/05/radovan-582102-unsplash.jpg') ;
+  background-size:cover;
+  height: 400px;
+}

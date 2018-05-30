@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^assistance/', include('assistance.urls')),
     url(r'^$', views.index, name="index"),
     url(r'^summernote/', include('django_summernote.urls')),
+    url(r'^signout$', auth_views.logout, name="signout"),
 ]+ static(settings.MEDIA_URL,
                          document_root=settings.MEDIA_ROOT)
 
