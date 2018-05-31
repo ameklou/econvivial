@@ -38,11 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
     'account',
-    'django_summernote',
-    'consultation',
     'assistance',
+    'consultation',
+    'main',
+    'django_summernote',
+
+
 
 ]
 SITE_ID = 1
