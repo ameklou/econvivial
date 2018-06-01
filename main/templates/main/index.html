@@ -105,8 +105,49 @@
     </div>
   <!-- end services -->
 
+  <!-- last posts -->
+<div class="last_post">
+  <h3 class="center-align">CONSEILS PRATIQUES</h3>
+  <div class="container">
+    <div class="row">
+      {% for post in posts %}
+            <div class="col l4 m4 s12">
+              <div class="card main-card" >
+                        <div class="card-image">
+                            <img src="{{post.cover.url}}" class="responsive-img">
+
+                        </div>
+                        <div class="card-content">
+                            <a href="{{post.get_absolute_url}}" class="card-title medium">{{post.title }} </a>
+
+                        </div>
+                    </div>
+            </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+  <!-- end last posts -->
+
   <!-- Call to action -->
 <div class="row action">
+  <div class="container">
+    <div class="row">
+      <div class="center-align">
+
+      <i class="material-icons extra-large white-text">get_app</i>
+      <p>
+        <h1 class="white-text" style="margin-top:-0.1em;">Telecharger eCentre Convivial</h1>
+      </p>
+        <div class="row">
+          <div class="col l4 offset-l4 m4 offset-m4 s10 offset-s1">
+            <a href="#"><img src="{% static 'main/img/play.png'%}" alt="" class="responsive-img"></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 </div>
   <!-- end call to action -->
