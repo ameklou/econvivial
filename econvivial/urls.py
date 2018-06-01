@@ -29,7 +29,7 @@ urlpatterns = [
     url(r'^conseil/', include('conseil.urls')),
     url(r'^$', views.index, name="index"),
     url(r'^summernote/', include('django_summernote.urls')),
-    url(r'^signout$', auth_views.logout, name="signout"),
+    url(r'^signout$', auth_views.logout,{'next_page': settings.LOGOUT_REDIRECT_URL}, name="signout"),
 ]+ static(settings.MEDIA_URL,
                          document_root=settings.MEDIA_ROOT)
 

@@ -5920,7 +5920,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     opacity: 0; } }
 .slider {
   position: relative;
-  height: 500px;
+  height: 400px;
   width: 100%; }
   .slider.fullscreen {
     height: 100%;
@@ -5936,11 +5936,9 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
       z-index: 2;
       bottom: 30px; }
   .slider .slides {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://econv.tk/wp-content/uploads/2018/05/IMAGE-OK.jpg");
-    background-size: cover;
-    background-position: top;
+    background-color: #9e9e9e;
     margin: 0;
-    height: 500px; }
+    height: 400px; }
     .slider .slides li {
       opacity: 0;
       position: absolute;
@@ -5984,6 +5982,74 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
       transition: background-color .3s;
       border-radius: 50%; }
       .slider .indicators .indicator-item.active {
+        background-color: #4CAF50; }
+
+.main {
+  position: relative;
+  height: 500px;
+  width: 100%; }
+  .main.fullscreen {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .main.fullscreen ul.slides {
+      height: 100%; }
+    .main.fullscreen ul.indicators {
+      z-index: 2;
+      bottom: 30px; }
+  .main .slides {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://econv.tk/wp-content/uploads/2018/05/IMAGE-OK.jpg");
+    background-size: cover;
+    background-position: top;
+    margin: 0;
+    height: 500px; }
+    .main .slides li {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: inherit;
+      overflow: hidden; }
+      .main .slides li img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center; }
+      .main .slides li .caption {
+        color: #fff;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        width: 70%;
+        opacity: 0; }
+        .main .slides li .caption p {
+          color: #e0e0e0; }
+      .main .slides li.active {
+        z-index: 2; }
+  .main .indicators {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0; }
+    .main .indicators .indicator-item {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      height: 16px;
+      width: 16px;
+      margin: 0 12px;
+      background-color: #e0e0e0;
+      transition: background-color .3s;
+      border-radius: 50%; }
+      .main .indicators .indicator-item.active {
         background-color: #4CAF50; }
 
 .consultation {

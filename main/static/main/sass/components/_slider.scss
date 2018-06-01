@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  height: 500px;
+  height: 400px;
   width: 100%;
 
   // Fullscreen slider
@@ -24,11 +24,9 @@
   }
 
   .slides {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://econv.tk/wp-content/uploads/2018/05/IMAGE-OK.jpg");
-    background-size:cover;
-    background-position: top;
+    background-color: $slider-bg-color;
     margin: 0;
-    height: 500px;
+    height: 400px;
 
     li {
       opacity: 0;

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from django.urls import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,7 +44,9 @@ INSTALLED_APPS = [
     'consultation',
     'main',
     'conseil',
+    'planning',
     'django_summernote',
+    'audiofield',
 
 
 
@@ -58,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'audiofield.middleware.threadlocals.ThreadLocals',
 ]
 
 ROOT_URLCONF = 'econvivial.urls'
@@ -140,3 +144,20 @@ EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_HOST_USER = 'dev@ecentreconvivial.org'
 EMAIL_HOST_PASSWORD = '#open@bunshin'
 EMAIL_PORT = 587
+
+# Frontend widget values
+# 0-Keep original, 1-Mono, 2-Stereo
+CHANNEL_TYPE_VALUE = 0
+
+# 0-Keep original, 8000-8000Hz, 16000-16000Hz, 22050-22050Hz,
+# 44100-44100Hz, 48000-48000Hz, 96000-96000Hz
+FREQ_TYPE_VALUE = 8000
+
+# 0-Keep original, 1-Convert to MP3, 2-Convert to WAV, 3-Convert to OGG
+CONVERT_TYPE_VALUE = 0
+
+
+#LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
+LOGIN_URL = reverse_lazy('signin')
+LOGOUT_URL = reverse_lazy('signout')
+LOGOUT_REDIRECT_URL=reverse_lazy('index')

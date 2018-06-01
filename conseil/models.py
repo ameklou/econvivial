@@ -2,7 +2,9 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
-
+from django.conf import settings
+from audiofield.fields import AudioField
+import os.path
 
 # Create your models here.
 class PublishedManager(models.Manager):
@@ -30,9 +32,14 @@ class Post(models.Model):
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    document=models.FileField(upload_to="document")
+    audio_file = AudioField(upload_to='audios', blank=True,
+                        ext_whitelist=(".mp3", ".wav", ".ogg"),
+                        help_text=("Allowed type - .mp3, .wav, .ogg"))
     status = models.CharField(max_length=10,
                                  choices=STATUS_CHOICES,
                                  default='draft')
+
     #tags = TaggableManager()
 
     objects = models.Manager() # The default manager.
@@ -43,6 +50,16 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def audio_file_player(self):
+        """audio player tag for admin"""
+        if self.audio_file:
+            file_url = settings.MEDIA_URL + str(self.audio_file)
+            #player_string = '<audio src="%s" controls>Your browser does not support the audio element.</audio>' % (file_url)
+            return file_url
+    audio_file_player.allow_tags = True
+    audio_file_player.short_description = ('Audio file player')
+
 
 
     def get_absolute_url(self):

@@ -2,4 +2,36 @@
 {% block title %}eCentre Convivial | {{post.title}}{% endblock title %}
 {% block content %}
 {% include "main/menu.html" %}
+<div class="slider">
+    <ul class="slides">
+        <li>
+            <img src="{{ post.cover.url }} " alt="" class="responsive-img ">
+
+        </li>
+    </ul>
+</div>
+<div class="row new">
+    <div class="col l8 m12 s12">
+
+
+
+        <div class="col l9 offset-l1 ">
+          <h4 class=" bold red-text">{{ post.title | upper }} </h4>
+            <div class="justify">{{ post.body | safe }} </div>
+            <div class=" center-align">
+              <div>
+                <audio controls class="center-align">
+                  <source src="{{post.audio_file_player}}" type="audio/mpeg">
+
+                Votre navigateur ne supporte pas la balise audio.
+                </audio>
+              </div>
+              <a href="{{post.document.url}}" class="btn waves-effect">Telecharger en pdf</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
 {% endblock content %}

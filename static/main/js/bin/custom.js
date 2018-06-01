@@ -1,0 +1,12 @@
+$(document).ready(function(){
+  $(".dropdown-trigger").dropdown(
+  {
+    hover:true,
+    coverTrigger:false,
+    constrainWidth:false
+  }
+  );
+  $('.sidenav').sidenav();
+  $('select').formSelect();
+}
+)
