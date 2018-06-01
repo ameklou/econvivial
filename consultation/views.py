@@ -48,11 +48,14 @@ def consultation_detail(request,pk,year,month,day,consultation):
     return render(request,'consultation/detail.html',{'consultation':consultation})
 
 def index(request):
-    context={
-    'consultations':Consultation.objects.filter(owner=request.user)
+    if request.user.is_authenticated:
+        context={
+        'consultations':Consultation.objects.filter(owner=request.user)
 
-    }
-    return render(request, 'consultation/index.html',context)
+        }
+        return render(request, 'consultation/index.html',context)
+    else:
+        return render(request, 'consultation/index.html')
     # if request.method=='POST':
     #     form=ConsultationForm(request.POST)
     #     if form.is_valid():

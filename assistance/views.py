@@ -4,11 +4,14 @@ from .forms import AssistanceForm
 # Create your views here.
 
 def index(request):
-    context={
-    'assistances':Assistance.objects.filter(owner=request.user)
+    if request.user.is_authenticated:
+        context={
+        'assistances':Assistance.objects.filter(owner=request.user)
 
-    }
-    return render(request, 'assistance/index.html',context)
+        }
+        return render(request, 'assistance/index.html',context)
+    else:
+        return render(request, 'assistance/index.html')
 
 def assistance_detail(request,pk,year,month,day,assistance):
     if request.method == 'POST':
