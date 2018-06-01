@@ -17,6 +17,7 @@ body{
 }
 
 .about{
+  padding-top: 2em;
   height: 25em;
 
 }
@@ -28,6 +29,7 @@ body{
 
 }
 .text-top{
+
   padding-top: 1em;
 }
 .btm{

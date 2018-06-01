@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'assistance',
     'consultation',
     'main',
+    'conseil',
     'django_summernote',
 
 
