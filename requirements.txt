@@ -1,5 +1,14 @@
+amqp==1.4.9
+anyjson==0.3.3
+billiard==3.3.0.23
+celery==3.1.26.post2
 Django==1.11
+django-audiofield==0.10.0
+django-celery==3.2.2
 django-summernote==0.8.8.7
 django-uuidfield==0.5.0
+kombu==3.0.37
 Pillow==5.1.0
 pytz==2018.4
+six==1.11.0
+vine==1.1.4
