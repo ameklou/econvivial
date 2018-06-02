@@ -1,24 +1,57 @@
 /*
-Error: Undefined variable: "$slider-bg-color".
-        on line 27 of /Users/Surya/Codelabs/python/econvivial/econvivial/main/static/main/sass/components/_slider.scss
+Error: Undefined variable: "$slider-bg-color-light".
+        on line 58 of /Users/Surya/Codelabs/python/econvivial/econvivial/main/static/main/sass/components/_main.scss
 
-22:       bottom: 30px;
-23:     }
-24:   }
-25: 
-26:   .slides {
-27:     background-color: $slider-bg-color;
-28:     margin: 0;
-29:     height: 400px;
-30: 
-31:     li {
-32:       opacity: 0;
+53:         top: 15%;
+54:         left: 15%;
+55:         width: 70%;
+56:         opacity: 0;
+57: 
+58:         p { color: $slider-bg-color-light; }
+59:       }
+60: 
+61:       &.active {
+62:         z-index: 2;
+63:       }
 
 Backtrace:
-/Users/Surya/Codelabs/python/econvivial/econvivial/main/static/main/sass/components/_slider.scss:27
+/Users/Surya/Codelabs/python/econvivial/econvivial/main/static/main/sass/components/_main.scss:58
 /Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 /Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Users/Surya/.rvm/gems/ruby-2.4.1/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
@@ -75,4 +108,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$slider-bg-color\".\A         on line 27 of /Users/Surya/Codelabs/python/econvivial/econvivial/main/static/main/sass/components/_slider.scss\A \A 22:       bottom: 30px;\A 23:     }\A 24:   }\A 25: \A 26:   .slides {\A 27:     background-color: $slider-bg-color;\A 28:     margin: 0;\A 29:     height: 400px;\A 30: \A 31:     li {\A 32:       opacity: 0;"; }
+  content: "Error: Undefined variable: \"$slider-bg-color-light\".\A         on line 58 of /Users/Surya/Codelabs/python/econvivial/econvivial/main/static/main/sass/components/_main.scss\A \A 53:         top: 15%;\A 54:         left: 15%;\A 55:         width: 70%;\A 56:         opacity: 0;\A 57: \A 58:         p { color: $slider-bg-color-light; }\A 59:       }\A 60: \A 61:       &.active {\A 62:         z-index: 2;\A 63:       }"; }

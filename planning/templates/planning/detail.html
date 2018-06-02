@@ -1,0 +1,23 @@
+{% extends "main/base.html" %}
+{% block title %}eCentre Convivial | {{plan.title}}{% endblock title %}
+{% block content %}
+{% include "main/menu.html" %}
+
+<div class="row top">
+    <div class="col l8 m8 offset-l2 offset-m2 s12">
+          <div class="row">
+            <img src="{{ plan.cover.url }} " alt="" class="responsive-img ">
+          </div>
+          <h4 class=" bold red-text">{{ plan.title | upper }} </h4>
+            <div class="justify">{{ plan.description | safe }} </div>
+            <div class=" center-align">
+              <div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock content %}

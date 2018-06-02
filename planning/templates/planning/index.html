@@ -1,0 +1,43 @@
+{% extends "main/base.html" %}
+{% block title %} eCentre Convivial | Planning Famillial{% endblock title %}
+{% block content %}
+  {% include "main/menu.html" %}
+  <div class="consultation hide-on-med-and-down ">
+      <ul class="slides">
+        <div class="container">
+          <div class="row">
+            <div class="col l8 m8 s12">
+              <br><br>
+              <h2 class="white-text">Planning Famillial</h2>
+              <p class="white-text">Promouvoir l’espacement de naissance et éviter des grossesses précoces ou non désirées, tel est notre objectif. Aussi, désirez-vous d’opter pour une méthode contraceptive? eCentre Convivial vous offre des informations sur les méthodes contraceptives nécessaires et vous met en relation avec une formation sanitaire la plus proche pouvant vous aider dans votre choix.<br>
+
+            </div>
+          </div>
+
+        </div>
+
+
+      </ul>
+    </div>
+    <div class="container top" >
+      <div class="row">
+        {% for plan in plans %}
+              <div class="col l6 m6 s12">
+                <div class="card main-card" >
+                          <div class="card-image">
+                              <img src="{{plan.cover.url}}" class="responsive-img">
+
+                          </div>
+                          <div class="card-content">
+                              <a href="{{plan.get_absolute_url}}" class="card-title medium">{{plan.title }} </a>
+
+                          </div>
+                      </div>
+              </div>
+        {% endfor %}
+      </div>
+    </div>
+
+
+
+{% endblock content %}

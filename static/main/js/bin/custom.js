@@ -8,5 +8,8 @@ $(document).ready(function(){
   );
   $('.sidenav').sidenav();
   $('select').formSelect();
+  $('.slider').slider(
+    {indicators:false}
+  );
 }
 )

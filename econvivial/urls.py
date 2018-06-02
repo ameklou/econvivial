@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^consultation/', include('consultation.urls')),
     url(r'^assistance/', include('assistance.urls')),
     url(r'^conseil/', include('conseil.urls')),
+    url(r'^planning/', include('planning.urls')),
     url(r'^$', views.index, name="index"),
     url(r'^summernote/', include('django_summernote.urls')),
     url(r'^signout$', auth_views.logout,{'next_page': settings.LOGOUT_REDIRECT_URL}, name="signout"),
